@@ -1,21 +1,21 @@
 import Todo from './Todo';
 
-function TodoList({ todos, index, deleteTodo }) {
+function TodoList({ todos, deleteTodo, toggleTodo }) {
 	return (
 		<div className="todoList">
 			{todos.length > 0 ? (
-				todos.map((todo, index) => {
+				todos.map((todo) => {
 					return (
 						<Todo
-							key={index}
+							key={todo.id}
 							todo={todo}
-							index={index}
 							deleteTodo={deleteTodo}
+							toggleTodo={toggleTodo}
 						/>
 					);
 				})
 			) : (
-				<h3>No tasks at the moment</h3>
+				<h3>No todo at the moment</h3>
 			)}
 		</div>
 	);
