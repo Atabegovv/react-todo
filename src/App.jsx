@@ -4,8 +4,6 @@ import TodoForm from './components/todos/TodoForm';
 import TodoList from './components/todos/TodoList';
 import TodoActions from './components/todos/TodoActions';
 import './App.css';
-import { isCompositeComponent } from 'react-dom/test-utils';
-import { RiH3 } from 'react-icons/ri';
 
 function App() {
 	const [todos, setTodos] = useState([]);
